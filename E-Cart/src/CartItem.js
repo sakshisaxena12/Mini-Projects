@@ -10,6 +10,7 @@ class CartItem extends React.Component {
       price: 10,
       Qty: 1
     }
+
     {/*when we have multiple event handlers can be put in the constructor itself
     this.increaseQuantity=this.increaseQuantity.bind(this);
   */}
@@ -32,6 +33,9 @@ class CartItem extends React.Component {
           <div style={{ fontSize: 25 }}>{title}</div>
           <div style={{ color: "grey" }}>Rs {price}</div>
           <div style={{ color: "grey" }}>Qty: {Qty}</div>
+
+        {/*Buttons*/}
+
           <div className="cart-item-action">
             <img
               style={{ height: 24 }}
@@ -41,6 +45,7 @@ class CartItem extends React.Component {
               onClick={this.increaseQuantity}
             />
             {/*onClick={this.increaseQuantity.bind(this)*/}
+
             <img
               style={{ height: 24 }}
               alt="decrease"
