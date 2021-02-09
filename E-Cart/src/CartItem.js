@@ -1,7 +1,20 @@
 import React from "react";
 
 class CartItem extends React.Component {
+  //state in react:
+  constructor()
+  {
+    super();
+    this.state={
+      title: 'Phone',
+      price: 10,
+      Qty: 1
+    }
+  }
+
+
   render() {
+    const {title,price,Qty}=this.state;
     return (
       <div className="cart-item">
         <div className="left-block">
@@ -9,27 +22,27 @@ class CartItem extends React.Component {
         </div>
         <div className="right-block">
           {/*assiging inline styles*/}
-          <div style={{ fontSize: 25 }}>Phone</div>
-          <div style={{ color: "grey" }}>Rs. 1000</div>
-          <div style={{ color: "grey" }}>Qty: 1</div>
+          <div style={{ fontSize: 25 }}>{title}</div>
+          <div style={{ color: "grey" }}>Rs {price}</div>
+          <div style={{ color: "grey" }}>Qty: {Qty}</div>
           <div className="cart-item-action">
             <img
               style={{ height: 24 }}
               alt="increase"
               className="action-icons"
-              src="https://www.flaticon.com/svg/vstatic/svg/1828/1828926.svg?token=exp=1612558668~hmac=4d9245b1fc5af858a4210fe4283dd066"
+              src="http://image.flaticon.com/icons/svg/992/992651.svg"
             />
             <img
               style={{ height: 24 }}
               alt="decrease"
               className="action-icons"
-              src="https://www.flaticon.com/svg/vstatic/svg/992/992683.svg?token=exp=1612557847~hmac=361cfec6772aeb94224135070d4a00a2"
+              src="http://image.flaticon.com/icons/svg/1665/1665612.svg"
             />
             <img
               style={{ height: 25 }}
               alt="delete"
               className="action-icons"
-              src="https://www.flaticon.com/svg/vstatic/svg/3096/3096673.svg?token=exp=1612558700~hmac=26a2bcb25769b7ed7e946540004d12be"
+              src="http://image.flaticon.com/icons/svg/1214/1214428.svg"
             />
           </div>
         </div>
@@ -38,7 +51,7 @@ class CartItem extends React.Component {
   }
 }
 
-//styling using obj (since it is js)
+//styling using obj since it is js
 const style = {
   image: {
     height: 110,
