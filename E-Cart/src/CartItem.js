@@ -10,6 +10,13 @@ class CartItem extends React.Component {
       price: 10,
       Qty: 1
     }
+    {/*when we have multiple event handlers can be put in the constructor itself
+    this.increaseQuantity=this.increaseQuantity.bind(this);
+  */}
+  }
+
+  increaseQuantity = () => {
+    console.log('this',this.state);
   }
 
 
@@ -31,7 +38,9 @@ class CartItem extends React.Component {
               alt="increase"
               className="action-icons"
               src="http://image.flaticon.com/icons/svg/992/992651.svg"
+              onClick={this.increaseQuantity}
             />
+            {/*onClick={this.increaseQuantity.bind(this)*/}
             <img
               style={{ height: 24 }}
               alt="decrease"
